@@ -1,0 +1,12 @@
+name = "ada_controller"
+description = "1DT004 Lab2 Ada based line following robot controller."
+version = "0.1.0-dev"
+
+authors = ["Ivan Shtuka", "Daniel Mohagheghifard"]
+maintainers = ["Ivan Shtuka <is222zf@gmail.com>", "Daniel Mohagheghifard <danielmmfard@gmail.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+executables = ["ada_controller"]
+
+[build-switches]
+"*".ada_version = "Ada95"
+"*".style_checks = "No"
