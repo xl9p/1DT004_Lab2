@@ -9,7 +9,11 @@
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
   "containerEnv": {
     "DISPLAY": "${localEnv:DISPLAY}",
-    "NVIDIA_DRIVER_CAPABILITIES": "graphics,utility,compute"
+    "NVIDIA_DRIVER_CAPABILITIES": "all",
+    "__NV_PRIME_RENDER_OFFLOAD": "1",
+    "__GLX_VENDOR_LIBRARY_NAME": "nvidia",
+    "__VK_LAYER_NV_optimus": "NVIDIA_only",
+    "QT_X11_NO_MITSHM": "1"
   },
   "customizations": {
     "vscode": {

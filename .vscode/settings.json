@@ -1,3 +1,4 @@
 {
-    "ada.projectFile": "ada_controller/ada_controller.gpr"
+    "ada.projectFile": "ada_controller/ada_controller.gpr",
+    "sarif-viewer.connectToGithubCodeScanning": "off"
 }
