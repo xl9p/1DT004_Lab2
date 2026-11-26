@@ -154,7 +154,7 @@ package body Webots_API is
       end loop;
    end WebotsSync;
 
-   procedure set_motor_speed (id : MotorID; value : Integer) is
+   procedure set_motor_speed (id : MotorID; value : MotorSpeed) is
    begin
       Obj.set_motor_speed (id, value);
    end set_motor_speed;
