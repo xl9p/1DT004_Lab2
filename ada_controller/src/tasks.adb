@@ -59,24 +59,27 @@ package body Tasks is
             else
                Event.Signal (UpReleased);
             end if;
+         end if;
 
-         elsif button_pressed (DownButton) /= DownState then
+         if button_pressed (DownButton) /= DownState then
             DownState := not DownState;
             if DownState then
                Event.Signal (DownPressed);
             else
                Event.Signal (DownReleased);
             end if;
+         end if;
 
-         elsif button_pressed (LeftButton) /= LeftState then
+         if button_pressed (LeftButton) /= LeftState then
             LeftState := not LeftState;
             if LeftState then
                Event.Signal (LeftPressed);
             else
                Event.Signal (LeftReleased);
             end if;
+         end if;
 
-         elsif button_pressed (RightButton) /= RightState then
+         if button_pressed (RightButton) /= RightState then
             RightState := not RightState;
             if RightState then
                Event.Signal (RightPressed);
@@ -97,7 +100,7 @@ package body Tasks is
    end MotorControlTask;
    task body MotorControlTask is
       Next_Release    : Time := Clock;
-      Period          : constant Time_Span := Milliseconds (10);
+      Period          : constant Time_Span := Milliseconds (1);
       EventTriggered  : EventID;
       LeftMotorSpeed  : MotorSpeed := 0;
       RightMotorSpeed : MotorSpeed := 0;
